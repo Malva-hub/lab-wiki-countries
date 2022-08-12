@@ -2,6 +2,7 @@ import {useState} from "react"
 import {useEffect} from "react"
 import { useParams } from "react-router-dom"
 import axios from "axios"
+import {Link} from "react-router-dom";
 
 function CountryDetails() {
 
@@ -44,7 +45,8 @@ function CountryDetails() {
         {countryDetails.borders.map((eachBorder)=>{
           return(
 
-            <li>{eachBorder}</li>
+            <li><Link to={`/${eachBorder}`}>{eachBorder}</Link> </li>
+           
           )
 
           
